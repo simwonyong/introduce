@@ -340,11 +340,38 @@
     .footer-right a:hover { color: var(--text); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
+    @media (max-width: 768px) {
+      nav { padding: 0 4%; height: 52px; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.78rem; }
+
+      .hero { padding: 90px 4% 60px; }
       .hero-stats { gap: 1.5rem; }
-      .career-grid { grid-template-columns: 1fr; }
-      .edu-table tbody td:last-child { text-align: left; padding-left: 0; }
+      .hero-philosophy { max-width: 100%; }
+
+      section { padding: 56px 4%; }
+
+      .skills-table { display: block; }
+      .skills-table tr { display: flex; flex-direction: column; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+      .skills-table tr:last-child { border-bottom: none; }
+      .skills-table td { padding: 0; width: auto !important; white-space: normal; }
+      .skills-table td:first-child { font-size: 0.7rem; margin-bottom: 0.5rem; padding-top: 0; }
+
+      .career-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+
+      .edu-table thead { display: none; }
+      .edu-table tbody tr { display: flex; flex-direction: column; padding: 0.9rem 0; gap: 0.25rem; }
+      .edu-table tbody td { padding: 0; font-size: 0.85rem; }
+      .edu-table tbody td:last-child { text-align: left; padding-left: 0; font-size: 0.75rem; color: var(--accent); }
+
+      footer { flex-direction: column; align-items: flex-start; padding: 2rem 4%; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+      nav { justify-content: center; }
+      .hero-contact { flex-direction: column; }
+      .btn { text-align: center; width: 100%; }
     }
   </style>
 </head>
@@ -352,7 +379,7 @@
 
   <!-- NAV -->
   <nav>
-    <span class="nav-name">심원용</span>
+
     <ul class="nav-links">
       <li><a href="#about">소개</a></li>
       <li><a href="#skills">기술 역량</a></li>
@@ -365,7 +392,7 @@
   <!-- HERO -->
   <section class="hero" id="about">
     <p class="hero-eyebrow">강사 프로필 · Backend & DevOps</p>
-    <h1 class="hero-name">심원용</h1>
+    <h1 class="hero-name">심원용 강사</h1>
     <p class="hero-title">국비 양성과정 전문 강사 · Java / Spring / AWS DevOps</p>
 
     <div class="hero-philosophy">
