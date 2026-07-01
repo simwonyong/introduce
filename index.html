@@ -288,6 +288,83 @@
       margin-top: 0.1rem;
     }
 
+    /* ── PROJECT ── */
+    .project-card {
+      max-width: 860px;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 2rem 2.2rem;
+    }
+    .project-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .project-period {
+      font-size: 0.78rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .project-sub {
+      font-size: 0.82rem;
+      color: var(--text2);
+      margin-bottom: 1.6rem;
+      padding-bottom: 1.3rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .project-block { margin-bottom: 1.4rem; }
+    .project-block:last-child { margin-bottom: 0; }
+    .project-block .label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .project-block p {
+      font-size: 0.88rem;
+      color: var(--text3);
+      line-height: 1.8;
+    }
+    .project-tasks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .project-tasks li {
+      font-size: 0.88rem;
+      color: var(--text3);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .project-tasks li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0.6em;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
     /* ── NCS COMPETENCY ── */
     .ncs-list {
       max-width: 860px;
@@ -443,6 +520,7 @@
       <li><a href="#about">소개</a></li>
       <li><a href="#skills">기술 역량</a></li>
       <li><a href="#career">경력</a></li>
+      <li><a href="#project">프로젝트</a></li>
       <li><a href="#ncs">NCS 강의</a></li>
       <li><a href="#history">교육 이력</a></li>
       <li><a href="#completions">수료 이력</a></li>
@@ -596,6 +674,56 @@
           <li>정보올림피아드 알고리즘 강의</li>
           <li>온라인 강의 촬영 및 교안 제작</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project">
+    <p class="section-eyebrow">Project</p>
+    <h2 class="section-title">프로젝트 수행 경력</h2>
+    <div class="project-card">
+      <div class="project-head">
+        <span class="project-title">AI Agent 기반 상담(아웃바운드) 자동화 솔루션 도입</span>
+        <span class="project-period">2026.01 ~ 현재</span>
+      </div>
+      <p class="project-sub">인공지능(AI) 기반 상담 자동화 솔루션 도입 프로젝트 · 기관 내부</p>
+
+      <div class="project-block">
+        <span class="label">추진 배경</span>
+        <p>훈련생 모집 상담 및 반복 문의 응대 업무의 효율화를 위하여, 음성·텍스트 기반 AI 상담 에이전트의 도입을 기획.</p>
+      </div>
+
+      <div class="project-block">
+        <span class="label">담당 업무</span>
+        <ul class="project-tasks">
+          <li>AI 상담 자동화 요구사항 정의 및 대상 업무 프로세스 분석</li>
+          <li>STT/TTS·LLM 기반 대화형 에이전트 등 후보 솔루션(벤더)의 기능·성능·비용 비교·검토 및 도입 아키텍처 설계</li>
+          <li>상담 시나리오 및 지식베이스(FAQ) 설계, 자동 응대 흐름(플로우) 설계</li>
+          <li>서비스 적용 방안 수립 및 단계별 도입 로드맵 작성</li>
+        </ul>
+      </div>
+
+      <div class="project-block">
+        <span class="label">직무교육 병행 이수</span>
+        <p>본 프로젝트 수행에 필요한 생성형 AI 설계·구현 역량 확보를 위해 인공지능 직종 직무교육(생성형 AI 프롬프트 엔지니어링, 클라우드+AI 통합 플랫폼 구현, LangChain.js 기반 문서학습 RAG FAQ 봇 구현 등 총 36시간, 한국기술교육대학교 능력개발교육원)을 병행 이수하고, 이를 상담 자동화 솔루션의 프롬프트·지식베이스·응대 흐름 설계에 직접 반영.</p>
+      </div>
+
+      <div class="project-block">
+        <span class="label">성과 · 산출물</span>
+        <p>「AI Agent 솔루션 도입 보고서」 및 프로젝트 로드맵을 작성하고, 도입 타당성·적용 방안을 도출.</p>
+      </div>
+
+      <div class="project-block">
+        <span class="label">활용 지식 · 기술</span>
+        <div class="project-tech">
+          <span class="tag">생성형 AI 서비스 기획</span>
+          <span class="tag">프롬프트 엔지니어링</span>
+          <span class="tag">RAG 기반 대화형 AI</span>
+          <span class="tag">클라우드 AI 플랫폼 연동</span>
+          <span class="tag">AI 솔루션 요구분석</span>
+          <span class="tag">벤더 평가</span>
+        </div>
       </div>
     </div>
   </section>
